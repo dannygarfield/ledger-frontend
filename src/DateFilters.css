@@ -1,0 +1,12 @@
+form {
+  margin: 8px 0;
+}
+
+input, button, option {
+    font-family: verdana;
+    font-size: 12px;
+}
+
+input[type=text] {
+    margin-left: 12px
+}
