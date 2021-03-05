@@ -1,6 +1,5 @@
 import React from 'react';
 import { formatDate } from './helpers'
-import './DateFilters.css'
 
   class DateFilters extends React.Component {
     constructor(props) {
@@ -13,14 +12,14 @@ import './DateFilters.css'
       const endDate = formatDate(this.props.endDate);
       return (
         <form>
-          <label className="filters">start:</label>
+          <label>start:</label>
           <input
             type="date"
             name="startDate"
             value={startDate}
             onChange={this.handleChange} />
           <br />
-          <label className="filters">end:</label>
+          <label>end:</label>
           <input
             type="date"
             name="endDate"

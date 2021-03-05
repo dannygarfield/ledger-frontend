@@ -27,7 +27,11 @@ input[type=text] {
 }
 
 .entry-form {
-  display: inline-block;
   width: 120px;
-  margin-bottom: 8px;
+}
+
+table, th, td {
+    border: 1px solid #888888;
+    border-collapse: collapse;
+    padding: 4px 32px 4px 4px;
 }

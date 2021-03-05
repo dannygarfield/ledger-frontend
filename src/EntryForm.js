@@ -1,5 +1,4 @@
 import React from 'react';
-import './EntryForm.css'
 
 class EntryForm extends React.Component {
   constructor(props) {
@@ -61,7 +60,7 @@ class EntryForm extends React.Component {
 
   handleSubmitEntry = (e) => {
     e.preventDefault();
-    console.log('submitting...')
+    console.log('submitting new entry...')
     const entryDate = this.state.entryDate
     const amount = this.state.amount
     const category = this.state.category

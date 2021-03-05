@@ -1,6 +1,7 @@
 import React from 'react';
 import EntryForm from './EntryForm.js'
 import BudgetEntriesContainer from './BudgetEntriesContainer.js'
+import './BudgetEntries.css'
 
 class BudgetEntries extends React.Component {
   constructor(props) {
@@ -19,10 +20,12 @@ class BudgetEntries extends React.Component {
         <EntryForm
           addEntry={this.handleAddEntry}
           api={this.props.api} />
+        <br></br>
         <BudgetEntriesContainer
           startDate={this.state.startDate}
           endDate={this.state.endDate}
-          filterDates={this.handleFilterDates} />
+          filterDates={this.handleFilterDates}
+          entries={this.state.entries} />
       </div>
     );
   }
@@ -37,7 +40,7 @@ class BudgetEntries extends React.Component {
   }
 
   handleFilterDates = (startDate, endDate) => {
-    console.log("FILTERING");
+    console.log("Filtering dates...");
     let updatedEntries = this.state.allEntries.filter(e => e.EntryDate >= startDate && e.EntryDate <= endDate)
     console.log(updatedEntries);
     this.setState( prevState => ({
