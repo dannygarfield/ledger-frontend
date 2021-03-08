@@ -10,10 +10,6 @@ function EntryForm(props) {
   const handleSubmitEntry = (e) => {
     e.preventDefault();
     console.log('submitting new entry...')
-    // const entryDate = this.state.entryDate
-    // const amount = this.state.amount
-    // const category = this.state.category
-    // const description = this.state.description
     if ([entryDate, amount, category, description].some(i => i === '')) {
         return;
     }
