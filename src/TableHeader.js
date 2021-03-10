@@ -1,11 +1,5 @@
-import React from 'react';
-
-class TableHeader extends React.Component {
-  render() {
+export default function TableHeader(props) {
     return (
-      <th>{this.props.name}</th>
+      <th>{props.name}</th>
     );
-  }
 }
-
-export default TableHeader;

@@ -1,7 +1,6 @@
 import React from 'react';
 import EntryForm from './EntryForm.js'
 import BudgetEntriesContainer from './BudgetEntriesContainer.js'
-import './BudgetEntries.css'
 
 class BudgetEntries extends React.Component {
   constructor(props) {
@@ -16,7 +15,6 @@ class BudgetEntries extends React.Component {
   render() {
     return (
       <div>
-        <p>REACT APP!</p>
         <EntryForm
           addEntry={this.handleAddEntry}
           api={this.props.api} />
@@ -34,7 +32,7 @@ class BudgetEntries extends React.Component {
   handleAddEntry = (entry) => {
       this.setState( prevState => {
          return {
-             entries: [...prevState.entries, entry]
+             entries: [entry, ...prevState.entries]
          };
       });
   }
